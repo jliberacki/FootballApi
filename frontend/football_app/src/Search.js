@@ -10,6 +10,7 @@ import TableBody from "@material-ui/core/TableBody";
 import Paper from "@material-ui/core/Paper";
 import TableRow from "@material-ui/core/TableRow";
 import TableCell from "@material-ui/core/TableCell";
+import {apiUrl} from "./config";
 
 export default function SearchComponent() {
 
@@ -24,7 +25,7 @@ export default function SearchComponent() {
     const [teamInfo, setTeamInfo] = useState(null);
     const [teamName, setTeamName] = useState(null);
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/api/teams/")
+        fetch(`${apiUrl}/teams/`)
             .then(response => response.json())
             .then(data => setTeams(data))
     }, [])
@@ -32,7 +33,7 @@ export default function SearchComponent() {
     const fetchTeam = () =>
     {
         const name = teamName && teamName.split(' ').join('_');
-        fetch(`http://127.0.0.1:8000/api/teams/${name}`)
+        fetch(`${apiUrl}/teams/${name}`)
             .then(response => response.json())
             .then(data => setTeamInfo(data))
     }
