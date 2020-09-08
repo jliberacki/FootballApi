@@ -9,7 +9,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install django.
 pip install django djangorestframework django-cors-headers
 ```
 
-Use [yarn] (https://yarnpkg.com/) to install node_modules.
+Use [yarn](https://yarnpkg.com/) to install node_modules.
 In the football_app directory run:
 ```bash
 yarn
