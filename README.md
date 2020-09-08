@@ -26,3 +26,5 @@ From the football_app directory run:
 ```bash
 yarn start
 ```
+
+Make sure that in config.js file in the football_app directory there is a proper api url.
